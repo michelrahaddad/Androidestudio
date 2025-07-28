@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <!-- Video View -->
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <!-- Connection Progress -->
+    <ProgressBar
+        android:id="@+id/progress_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!-- Controls Overlay -->
+    <LinearLayout
+        android:id="@+id/controls_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Status Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/gradient_overlay_top"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Recording Indicator -->
+            <TextView
+                android:id="@+id/tv_recording_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REC 00:00"
+                android:textColor="@color/recording_red"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/recording_background"
+                android:padding="8dp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Status Indicators -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_resolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1080p"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:background="@drawable/status_background"
+                    android:padding="4dp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tv_wifi_signal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-50 dBm"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:background="@drawable/status_background"
+                    android:padding="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/ic_wifi_small"
+                    android:drawablePadding="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_battery_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:background="@drawable/status_background"
+                    android:padding="4dp"
+                    android:drawableStart="@drawable/ic_battery"
+                    android:drawablePadding="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Middle Area (Expandable) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Bottom Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_overlay_bottom">
+
+            <!-- Zoom Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_zoom_out"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_zoom_out"
+                    android:background="@drawable/btn_circle_background"
+                    android:tint="@color/text_primary" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_zoom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:progressTint="@color/accent_orange"
+                    android:thumbTint="@color/accent_orange" />
+
+                <ImageButton
+                    android:id="@+id/btn_zoom_in"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_zoom_in"
+                    android:background="@drawable/btn_circle_background"
+                    android:tint="@color/text_primary" />
+
+                <TextView
+                    android:id="@+id/tv_zoom_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1x"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:layout_marginStart="16dp"
+                    android:minWidth="32dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Main Controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <!-- Left Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_gallery"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_gallery"
+                        android:background="@drawable/btn_circle_background"
+                        android:tint="@color/text_primary"
+                        android:layout_marginBottom="8dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_settings"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_settings"
+                        android:background="@drawable/btn_circle_background"
+                        android:tint="@color/text_primary" />
+
+                </LinearLayout>
+
+                <!-- Center Controls -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_capture"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/ic_camera_capture"
+                        android:background="@drawable/btn_capture_background"
+                        android:tint="@color/text_primary"
+                        android:layout_marginBottom="16dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_record"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/ic_record"
+                        android:background="@drawable/btn_record_background"
+                        android:tint="@color/recording_red" />
+
+                </LinearLayout>
+
+                <!-- Right Controls -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_rotate"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_rotate"
+                        android:background="@drawable/btn_circle_background"
+                        android:tint="@color/text_primary"
+                        android:layout_marginBottom="8dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_fullscreen"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_fullscreen"
+                        android:background="@drawable/btn_circle_background"
+                        android:tint="@color/text_primary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

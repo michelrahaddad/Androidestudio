@@ -1,0 +1,53 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48"
+    android:tint="@color/accent_orange">
+    
+    <!-- Corpo central do drone -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M16,20h16v8H16z"/>
+    
+    <!-- Hélice superior esquerda -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M12,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    
+    <!-- Hélice superior direita -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M36,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    
+    <!-- Hélice inferior esquerda -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M12,36m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    
+    <!-- Hélice inferior direita -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M36,36m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"/>
+    
+    <!-- Braços do drone -->
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M14,22h4v4h-4z"/>
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M30,22h4v4h-4z"/>
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M22,14h4v4h-4z"/>
+    <path
+        android:fillColor="@color/accent_orange"
+        android:pathData="M22,30h4v4h-4z"/>
+    
+    <!-- Câmera central -->
+    <path
+        android:fillColor="@color/text_primary"
+        android:pathData="M24,24m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+        
+</vector>
+

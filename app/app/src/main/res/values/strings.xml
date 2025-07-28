@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Info -->
+    <string name="app_name">DroneCam Pro</string>
+    <string name="app_subtitle">Controle Avançado de Drone</string>
+    <string name="app_version">v1.0.0</string>
+    
+    <!-- Main Activity -->
+    <string name="btn_connection">Conectar Dispositivo</string>
+    <string name="btn_camera">Controle da Câmera</string>
+    
+    <!-- Connection Activity -->
+    <string name="connection_title">Conexão Wi-Fi</string>
+    <string name="btn_scan">Buscar</string>
+    <string name="btn_connect">Conectar</string>
+    <string name="status_ready">Pronto para buscar dispositivos</string>
+    <string name="status_scanning">Procurando dispositivos...</string>
+    <string name="status_connecting">Conectando...</string>
+    <string name="status_connected">Conectado com sucesso!</string>
+    <string name="available_devices">Dispositivos Disponíveis</string>
+    <string name="no_device_selected">Nenhum dispositivo selecionado</string>
+    <string name="hint_password">Senha do dispositivo</string>
+    
+    <!-- Camera Activity -->
+    <string name="camera_title">Controle da Câmera</string>
+    <string name="recording_time">Tempo de Gravação</string>
+    <string name="zoom_level">Nível de Zoom</string>
+    <string name="battery_level">Nível da Bateria</string>
+    <string name="wifi_signal">Sinal Wi-Fi</string>
+    <string name="resolution">Resolução</string>
+    
+    <!-- Camera Settings -->
+    <string name="settings_title">Configurações da Câmera</string>
+    <string name="resolution_label">Resolução</string>
+    <string name="fps_label">FPS</string>
+    <string name="brightness_label">Brilho</string>
+    <string name="contrast_label">Contraste</string>
+    <string name="saturation_label">Saturação</string>
+    <string name="sharpness_label">Nitidez</string>
+    <string name="exposure_label">Exposição</string>
+    <string name="white_balance_label">Balanço de Branco</string>
+    <string name="video_quality_label">Qualidade do Vídeo</string>
+    <string name="microphone_label">Microfone</string>
+    <string name="auto_focus_label">Foco Automático</string>
+    <string name="stabilization_label">Estabilização de Imagem</string>
+    <string name="audio_recording_label">Gravação de Áudio</string>
+    <string name="btn_save">Salvar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_reset">Restaurar Padrões</string>
+    
+    <!-- Gallery Activity -->
+    <string name="gallery_title">Galeria</string>
+    <string name="empty_gallery">Nenhuma mídia encontrada</string>
+    <string name="empty_gallery_subtitle">Capture fotos e vídeos para vê-los aqui</string>
+    
+    <!-- Messages -->
+    <string name="wifi_disabled_title">Wi-Fi Desabilitado</string>
+    <string name="wifi_disabled_message">Seu Wi-Fi está desabilitado. Deseja habilitá-lo?</string>
+    <string name="connection_failed">Falha na conexão</string>
+    <string name="connection_timeout">Timeout na conexão</string>
+    <string name="connection_lost">Conexão perdida</string>
+    <string name="photo_captured">Foto capturada</string>
+    <string name="recording_started">Gravação iniciada</string>
+    <string name="recording_stopped">Gravação finalizada</string>
+    <string name="camera_rotated">Câmera rotacionada</string>
+    <string name="fullscreen_mode">Modo tela cheia</string>
+    <string name="normal_mode">Modo normal</string>
+    <string name="settings_saved">Configurações salvas</string>
+    <string name="file_shared">Arquivo compartilhado</string>
+    <string name="file_deleted">Arquivo excluído</string>
+    <string name="delete_confirmation">Tem certeza que deseja excluir este arquivo?</string>
+    
+    <!-- Errors -->
+    <string name="error_no_device_selected">Selecione um dispositivo primeiro</string>
+    <string name="error_password_required">Digite a senha do dispositivo</string>
+    <string name="error_stream_failed">Erro no stream de vídeo</string>
+    <string name="error_stream_unavailable">URL de streaming não disponível</string>
+    <string name="error_file_open">Não foi possível abrir o arquivo</string>
+    <string name="error_file_share">Não foi possível compartilhar o arquivo</string>
+    <string name="error_file_delete">Erro ao excluir arquivo</string>
+    
+    <!-- Actions -->
+    <string name="action_view">Visualizar</string>
+    <string name="action_share">Compartilhar</string>
+    <string name="action_delete">Excluir</string>
+    <string name="action_yes">Sim</string>
+    <string name="action_no">Não</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancelar</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_drone_logo">Logo do Drone</string>
+    <string name="cd_wifi_icon">Ícone Wi-Fi</string>
+    <string name="cd_camera_icon">Ícone Câmera</string>
+    <string name="cd_capture_button">Botão Capturar</string>
+    <string name="cd_record_button">Botão Gravar</string>
+    <string name="cd_zoom_in">Aumentar Zoom</string>
+    <string name="cd_zoom_out">Diminuir Zoom</string>
+    <string name="cd_rotate_camera">Rotacionar Câmera</string>
+    <string name="cd_settings">Configurações</string>
+    <string name="cd_gallery">Galeria</string>
+    <string name="cd_fullscreen">Tela Cheia</string>
+</resources>
+

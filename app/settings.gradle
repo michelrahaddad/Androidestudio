@@ -1,0 +1,54 @@
+pluginManagement {
+    repositories {
+        // Primary repositories
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+        
+        // Alternative mirrors (uncomment if needed)
+        // maven { url 'https://maven.aliyun.com/repository/google' }
+        // maven { url 'https://maven.aliyun.com/repository/central' }
+        // maven { url 'https://repo1.maven.org/maven2' }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        // Primary repositories
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        
+        // JitPack for GitHub dependencies
+        maven { 
+            url 'https://jitpack.io'
+            content {
+                includeGroupByRegex("com\\.github.*")
+            }
+        }
+        
+        // Alternative mirrors (uncomment if connectivity issues)
+        // maven { url 'https://maven.aliyun.com/repository/google' }
+        // maven { url 'https://maven.aliyun.com/repository/central' }
+        // maven { url 'https://repo1.maven.org/maven2' }
+        
+        // Local repository (for offline mode)
+        mavenLocal()
+    }
+}
+
+rootProject.name = "DroneCam Pro"
+include ':app'
+
